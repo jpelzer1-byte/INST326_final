@@ -1,7 +1,13 @@
 import random
 
 class Pig: 
-    """"""
+    """
+    
+        Attributes:
+        
+        Side Effects: 
+        
+    """
 
     def __init__(self, player): 
         self.player = player
