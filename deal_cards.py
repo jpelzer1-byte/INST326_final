@@ -17,3 +17,9 @@ def deal_cards(deck, num_of_players):
             hands[player].append(card)
             
     return hands
+
+if __name__ == "__main__":
+    fake_deck = [{"rank": str(i), "suit": "Spades"} for i in range(52)]
+    hands = deal_cards(fake_deck, 4)
+    print("Player 1 hand:", hands[0])
+    print("Cards left:", len(fake_deck))
