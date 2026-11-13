@@ -1,0 +1,30 @@
+def round_loser(player_hand, other_hands):
+
+    if 0 < len(player_hand) < 4 or 0 < len(other_hands) < 4:
+        raise ValueError('Either player or bot does not have enough cards.')
+
+    p_suits = {suits for suits, rank in player_hand}
+    o_suits = {suits for suits, rank in other_hands}
+
+    while 1 < len(o_suits) <= 4 or 1 < len(p_suits) <= 4:
+        print(f'Player hand: {player_hand}\nBot hand: {other_hands} \n')
+
+        if len(p_suits) == 1:
+            print(f'Player hand:{input('press any key to place finger: ')}')
+            break 
+        elif len(o_suits) == 1: 
+            print(f'Player hand: {player_hand}\nBot hand: *touches nose*')
+            break
+        else:
+            p_suits, o_suits
+            input("Press any key to continue: ")
+    
+    
+player = [('Clubs', 4), ('Clubs', 3), ('Diamonds', 9), ('Clubs', 4)]
+bot = [('Diamonds', 4), ('Hearts', 3), ('Diamonds', 9), ('Diamonds', 4)]
+
+print(round_loser(player, bot))
+
+
+
+            
