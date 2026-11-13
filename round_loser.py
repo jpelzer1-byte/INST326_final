@@ -32,12 +32,11 @@ def round_loser(player_hand, other_hands):
         else:
             p_suits, o_suits
             input("Press any key to continue: ")
-    
-    
-player = [('Clubs', 4), ('Clubs', 3), ('Clubs', 9), ('Clubs', 4)]
-bot = [('Diamonds', 4), ('Hearts', 3), ('Diamonds', 9), ('Diamonds', 4)]
 
-print(round_loser(player, bot))
+if __name__ == "__main__": 
+	player = [('Clubs', 4), ('Clubs', 3), ('Clubs', 9), ('Clubs', 4)]
+	bot = [('Diamonds', 4), ('Hearts', 3), ('Diamonds', 9), ('Diamonds', 4)]
+	print(f'loser function test: {round_loser(player, bot)}') 
 
 
 
