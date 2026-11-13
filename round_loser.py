@@ -1,4 +1,18 @@
 def round_loser(player_hand, other_hands):
+    """Takes the length of given set and compares in order to end 
+    passing loop.
+    
+		Args: 
+        player_hand (list of tuples): list of the “rank” and “suit” values a player has.
+        other_hands (list of tuples): list of tuples containing "rank" and "suit". 
+
+        Returns: 
+	        Boolean: allows player to place finger or displays bot placing finger. 
+
+        Raises: 
+           ValueError: Raised if player hand or bot hand is empty.
+    """
+
 
     if 0 < len(player_hand) < 4 or 0 < len(other_hands) < 4:
         raise ValueError('Either player or bot does not have enough cards.')
@@ -20,7 +34,7 @@ def round_loser(player_hand, other_hands):
             input("Press any key to continue: ")
     
     
-player = [('Clubs', 4), ('Clubs', 3), ('Diamonds', 9), ('Clubs', 4)]
+player = [('Clubs', 4), ('Clubs', 3), ('Clubs', 9), ('Clubs', 4)]
 bot = [('Diamonds', 4), ('Hearts', 3), ('Diamonds', 9), ('Diamonds', 4)]
 
 print(round_loser(player, bot))
